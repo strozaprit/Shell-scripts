@@ -1,0 +1,18 @@
+#!/bin/bash
+#For each pdf file in a folder, extract first 8 filename digits,
+#check if a folder with the same name exists and copy the file inside
+#if the folder doesn't exist, it creates the folder and copy the file
+
+folder=/script
+for lungo in $folder/*.pdf; do
+nomefile=${lungo##*/}
+echo $nomefile
+corto=${nomefile:0:8}
+echo ${corto}
+if [ -d "$corto" ]; then
+  cp $folder/$nomefile $folder/$corto
+else
+ mkdir $folder/$corto
+ cp $folder/$nomefile $folder/$corto
+fi
+done
