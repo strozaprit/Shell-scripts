@@ -18,7 +18,7 @@ do
 nomefile=${lungo##*/}
 #echo $nomefile
 corto=${nomefile:0:8}
-#echo ${corto}
+#echo $corto
 if [ -d $i/$corto ];
 then
   cp $i/$nomefile $i/$corto
