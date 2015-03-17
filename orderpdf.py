@@ -1,5 +1,6 @@
 #!/usr/bin/python
 __author__ = 'dariogaravini'
+# ciao
 
 import os
 import os.path
