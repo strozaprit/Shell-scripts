@@ -19,13 +19,13 @@ for dir in uffici:
                 if file.endswith('.pdf'):
 #                       print (file)
                         corto = file[0:8]
-                        lungo = os.path.join(dir,file[0:8])
+                        lungo = os.path.join(dir,corto)
 #                       print (lungo)
                         if os.path.exists(os.path.join(dir,corto)):
-#                                print 'esiste'
+#                               print 'esiste'
                                 shutil.move(os.path.join(dir, file),os.path.join(lungo,file))
                         else:
-#                                print 'non esiste'
+#                               print 'non esiste'
                                 os.makedirs(os.path.join(dir,corto))
                                 os.chmod(os.path.join(dir,corto), 0777)
                                 shutil.move(os.path.join(dir, file),os.path.join(lungo,file))
