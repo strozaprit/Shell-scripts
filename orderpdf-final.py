@@ -27,4 +27,5 @@ for dir in uffici:
                         else:
 #                                print 'non esiste'
                                 os.makedirs(os.path.join(dir,corto))
+                                os.chmod(os.path.join(dir,corto), 0777)
                                 shutil.move(os.path.join(dir, file),os.path.join(lungo,file))
